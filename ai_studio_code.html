@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Phoenix Baclayon | SEO Link Building & Outreach Specialist</title>
+  <meta name="description" content="Portfolio of John Phoenix Baclayon — SEO Link Building Outreach Specialist specializing in prospect research, backlink analysis, Ahrefs metrics evaluation, and campaign outreach." />
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CSS RESET & DESIGN TOKENS
+       ========================================================================== */
+    :root {
+      --bg-main: #050608;
+      --bg-surface-1: #080A0E;
+      --bg-surface-2: #0B0D12;
+      --bg-card: #101218;
+      --bg-card-hover: #141720;
+      
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-light: rgba(255, 255, 255, 0.14);
+      --border-accent: rgba(99, 102, 241, 0.35);
+
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+
+      --blue-accent: #38BDF8;
+      --indigo-accent: #6366F1;
+      --purple-accent: #A855F7;
+
+      --gradient-accent: linear-gradient(135deg, #38BDF8 0%, #6366F1 50%, #A855F7 100%);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+
+      --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-stack);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background: var(--bg-main);
+      position: relative;
+    }
+
+    /* Ambient background glow */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(5, 6, 8, 0) 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-spacing {
+      padding: 100px 0;
+    }
+
+    /* ==========================================================================
+       TYPOGRAPHY & TAGS
+       ========================================================================== */
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue-accent);
+      margin-bottom: 14px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--indigo-accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .section-description {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    .gradient-text {
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       BUTTONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: #11141D;
+      color: var(--text-main);
+      border: 1px solid var(--border-accent);
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+    }
+
+    .btn-primary:hover {
+      border-color: var(--blue-accent);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+      background: #161A26;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      color: var(--text-main);
+      border-color: var(--border-light);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-gradient {
+      background: var(--gradient-accent);
+      color: #050608;
+      font-weight: 700;
+      box-shadow: 0 0 25px rgba(99, 102, 241, 0.25);
+    }
+
+    .btn-gradient:hover {
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.45);
+      filter: brightness(1.08);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5, 6, 8, 0.84);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .logo span {
+      color: var(--blue-accent);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       HERO SECTION WITH PORTRAIT
+       ========================================================================== */
+    .hero {
+      padding: 85px 0 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-headline {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+      margin-bottom: 22px;
+    }
+
+    .hero-bio {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 34px;
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* PORTRAIT PRESENTATION CONTAINER */
+    .portrait-composition-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .portrait-card-frame {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 520px;
+      background: linear-gradient(165deg, #0f121b 0%, #080a0e 100%);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      border-radius: 28px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 35px rgba(99, 102, 241, 0.15);
+      transition: var(--transition-smooth);
+    }
+
+    .portrait-card-frame:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.55);
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 45px rgba(99, 102, 241, 0.28);
+    }
+
+    /* Subtle Blue/Purple Studio Backlight */
+    .portrait-glow-aura {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(168, 85, 247, 0.22) 50%, rgba(5, 6, 8, 0) 75%);
+      filter: blur(28px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* The Cutout Portrait Image */
+    .portrait-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 94%;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.65));
+      /* Clean subtle vignette gradient mask at the bottom to merge the suit with dark base */
+      mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+      transition: var(--transition-smooth);
+    }
+
+    .portrait-card-frame:hover .portrait-img {
+      transform: scale(1.02);
+    }
+
+    /* Floating Status Pill */
+    .floating-status-badge {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      background: rgba(11, 14, 20, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 8px 18px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      white-space: nowrap;
+    }
+
+    .status-pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #22c55e;
+      animation: pulseAnimation 2s infinite;
+    }
+
+    @keyframes pulseAnimation {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    .status-text {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */
+    .about-card {
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 54px;
+      position: relative;
+    }
+
+    .about-content {
+      max-width: 840px;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .about-text:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* ==========================================================================
+       SKILLS SECTION
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 48px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 25px rgba(99, 102, 241, 0.1);
+    }
+
+    .skill-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      color: var(--blue-accent);
+    }
+
+    .skill-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .skill-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       WORK SAMPLES SECTION
+       ========================================================================== */
+    .samples-list {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      margin-top: 50px;
+    }
+
+    .sample-card {
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sample-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(99, 102, 241, 0.08);
+    }
+
+    .sample-category {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--blue-accent);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .sample-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+
+    .sample-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 26px;
+      max-width: 780px;
+    }
+
+    .sample-disclaimer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Sample 1: Database Demo UI */
+    .database-ui {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .demo-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .demo-table th {
+      background: #0D0F16;
+      color: var(--text-dim);
+      padding: 12px 18px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border-color);
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .demo-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .status-live {
+      background: rgba(34, 197, 94, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    .status-review {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .chips-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+    }
+
+    /* Sample 2: Ahrefs Mock Panel */
+    .ahrefs-mock {
+      background: #0A0C12;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .ahrefs-metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .metric-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      text-align: left;
+    }
+
+    .metric-acr {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--blue-accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .metric-val {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric-lbl {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    /* Sample 3: Email Outreach Mock */
+    .email-preview {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .email-header {
+      background: #0D0F16;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .email-header strong {
+      color: var(--text-main);
+    }
+
+    .email-body {
+      padding: 24px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .email-body p {
+      margin-bottom: 12px;
+    }
+
+    .style-tags {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .style-tag {
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+      background: rgba(99, 102, 241, 0.08);
+      color: var(--blue-accent);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    /* ==========================================================================
+       PROCESS SECTION
+       ========================================================================== */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      margin-top: 50px;
+    }
+
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .process-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .process-number {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--blue-accent);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .process-step-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .process-step-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       WHY ME SECTION
+       ========================================================================== */
+    .whyme-card {
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 56px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .whyme-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .whyme-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.98rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .whyme-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--blue-accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       CONTACT SECTION
+       ========================================================================== */
+    .contact-wrapper {
+      background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.12) 0%, rgba(11, 13, 18, 0.95) 70%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-xl);
+      padding: 70px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 50px rgba(99, 102, 241, 0.1);
+    }
+
+    .contact-wrapper:hover {
+      box-shadow: 0 0 70px rgba(99, 102, 241, 0.18);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .contact-content {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .contact-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .email-direct {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      padding: 13px 22px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.02);
+      transition: var(--transition-smooth);
+    }
+
+    .email-direct:hover {
+      color: var(--text-main);
+      border-color: var(--border-light);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 0;
+      background: var(--bg-main);
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    /* ==========================================================================
+       SCROLL REVEAL ANIMATIONS
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .portrait-composition-wrap {
+        order: -1;
+      }
+      .portrait-card-frame {
+        max-width: 360px;
+        height: 450px;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .whyme-card {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .hero-headline {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-spacing {
+        padding: 70px 0;
+      }
+      .hero-headline {
+        font-size: 2.35rem;
+      }
+      .section-title {
+        font-size: 1.85rem;
+      }
+      .nav-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: #080A0E;
+        border-bottom: 1px solid var(--border-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 30px;
+        gap: 20px;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav-menu.is-open {
+        transform: translateY(0);
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .ahrefs-metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-card, .sample-card, .whyme-card, .contact-wrapper {
+        padding: 30px 20px;
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       STICKY NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="John Phoenix Baclayon">
+        JP<span>.</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#work" class="nav-link">Work Samples</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#why-me" class="nav-link">Why Me</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="mailto:john.phoenixb@gmail.com" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.85rem;">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH PORTRAIT
+       ========================================================================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Text (Left) -->
+        <div class="hero-text-col reveal">
+          <span class="eyebrow">SEO LINK BUILDING • OUTREACH • RESEARCH</span>
+          <h1 class="hero-headline">
+            Better links.<br />
+            <span class="gradient-text">Bigger opportunities.</span>
+          </h1>
+          <p class="hero-bio">
+            Hi, I'm John Phoenix Baclayon — an aspiring SEO Link Building Outreach Specialist with hands-on experience in backlink research, campaign tracking, Ahrefs research, and email outreach.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">
+              View My Work
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/john-phoenix-baclayon/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Connect on LinkedIn
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Composition (Right) -->
+        <div class="portrait-composition-wrap reveal">
+          <div class="portrait-card-frame">
+            <!-- Studio Backlight Glow -->
+            <div class="portrait-glow-aura"></div>
+            
+            <!-- Cutout Profile Photo -->
+            <img 
+              src="john-phoenix-baclayon.png" 
+              alt="John Phoenix Baclayon - SEO Link Building Specialist in dark suit" 
+              class="portrait-img"
+              loading="eager"
+            />
+
+            <!-- Glassmorphism Floating Pill Badge -->
+            <div class="floating-status-badge">
+              <span class="status-pulse-dot"></span>
+              <span class="status-text">Available for Outreach Projects</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== -->
+  <section class="section-spacing" id="about">
+    <div class="container">
+      <div class="about-card reveal">
+        <div class="about-content">
+          <span class="section-label">01 — ABOUT ME</span>
+          <h2 class="section-title">I'm building my career around SEO, research, and outreach.</h2>
+          <p class="about-text">
+            I became interested in SEO through practical link-building work. My experience includes researching potential websites, organizing backlink campaign data, working with different off-page SEO activities, and preparing outreach messages.
+          </p>
+          <p class="about-text">
+            I enjoy research-heavy tasks, keeping information organized, and learning new tools and workflows. My goal is to continue developing my skills in publisher outreach, link placement, and SEO campaign management.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+  <section class="section-spacing" id="skills">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">02 — SKILLS & EXPERTISE</span>
+        <h2 class="section-title">What I bring to a link-building team.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+          </div>
+          <h3 class="skill-title">Link Building</h3>
+          <p class="skill-desc">Directories, blog comments, profiles, social media, and other off-page activities.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <h3 class="skill-title">Website Prospecting</h3>
+          <p class="skill-desc">Finding relevant websites and potential opportunities for outreach and placements.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="skill-title">Outreach Communication</h3>
+          <p class="skill-desc">Clear, personalized email communication with different tones for different audiences.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 4h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="skill-title">Data Organization</h3>
+          <p class="skill-desc">Tracking websites, target URLs, dates, statuses, and campaign information accurately.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="skill-title">SEO Research</h3>
+          <p class="skill-desc">Using Ahrefs metrics to understand website quality and backlink opportunities.</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="skill-title">Fast Learning</h3>
+          <p class="skill-desc">Comfortable learning new SEO tools, systems, and processes in a team environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WORK SAMPLES SECTION
+       ========================================================================== -->
+  <section class="section-spacing" id="work">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">03 — WORK SAMPLES</span>
+        <h2 class="section-title">Real experience, presented responsibly.</h2>
+      </div>
+
+      <div class="samples-list">
+        
+        <!-- SAMPLE 01: LINK BUILDING DATABASE -->
+        <div class="sample-card reveal">
+          <span class="sample-category">LINK-BUILDING DATABASE</span>
+          <h3 class="sample-title">Campaign tracking & organization</h3>
+          <p class="sample-desc">
+            Worked with a large link-building spreadsheet covering multiple off-page SEO activities and thousands of tracked records.
+          </p>
+
+          <div class="database-ui">
+            <div class="table-container">
+              <table class="demo-table">
+                <thead>
+                  <tr>
+                    <th>Website / Domain</th>
+                    <th>Activity Type</th>
+                    <th>Target URL</th>
+                    <th>Submission Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>example-directory.org</td>
+                    <td>Web Directory</td>
+                    <td>domain.com/services</td>
+                    <td>Tracked</td>
+                    <td><span class="status-badge status-live">Live</span></td>
+                  </tr>
+                  <tr>
+                    <td>industry-community.io</td>
+                    <td>Q&amp;A / Community</td>
+                    <td>domain.com/blog/resource</td>
+                    <td>Tracked</td>
+                    <td><span class="status-badge status-live">Live</span></td>
+                  </tr>
+                  <tr>
+                    <td>niche-bookmarking.net</td>
+                    <td>Social Bookmarking</td>
+                    <td>domain.com/guide</td>
+                    <td>Tracked</td>
+                    <td><span class="status-badge status-review">Under Review</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="chips-list">
+            <span class="chip">Web directory submissions</span>
+            <span class="chip">Social bookmarking</span>
+            <span class="chip">Blog commenting</span>
+            <span class="chip">Profile links</span>
+            <span class="chip">Social media posting</span>
+            <span class="chip">Q&A / community posting</span>
+          </div>
+
+          <div class="sample-disclaimer">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Private client data and credentials are not published.
+          </div>
+        </div>
+
+        <!-- SAMPLE 02: AHREFS RESEARCH -->
+        <div class="sample-card reveal">
+          <span class="sample-category">AHREFS RESEARCH</span>
+          <h3 class="sample-title">Evaluating SEO signals</h3>
+          <p class="sample-desc">
+            Used Ahrefs to review website and backlink-related metrics while researching and evaluating websites.
+          </p>
+
+          <div class="ahrefs-mock">
+            <div class="ahrefs-metrics-row">
+              <div class="metric-box">
+                <div class="metric-acr">DR</div>
+                <div class="metric-val">Evaluated</div>
+                <div class="metric-lbl">Domain Rating</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-acr">RD</div>
+                <div class="metric-val">Evaluated</div>
+                <div class="metric-lbl">Referring Domains</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-acr">TR</div>
+                <div class="metric-val">Evaluated</div>
+                <div class="metric-lbl">Organic Traffic</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-acr">KW</div>
+                <div class="metric-val">Evaluated</div>
+                <div class="metric-lbl">Organic Keywords</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chips-list">
+            <span class="chip">Domain Rating evaluation</span>
+            <span class="chip">Referring domain analysis</span>
+            <span class="chip">Organic traffic signals</span>
+            <span class="chip">Organic keyword viability</span>
+            <span class="chip">Website health & crawl checks</span>
+          </div>
+
+          <div class="sample-disclaimer">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Specific client/project data is intentionally summarized.
+          </div>
+        </div>
+
+        <!-- SAMPLE 03: EMAIL OUTREACH -->
+        <div class="sample-card reveal">
+          <span class="sample-category">EMAIL OUTREACH</span>
+          <h3 class="sample-title">Adapting communication to the audience</h3>
+          <p class="sample-desc">
+            Worked with outreach templates for author campaigns using different tones while keeping the request and next step clear.
+          </p>
+
+          <div class="email-preview">
+            <div class="email-header">
+              Subject: <strong>Campaign collaboration / Resource suggestion</strong>
+            </div>
+            <div class="email-body">
+              <p>Dear [Name],</p>
+              <p>[Introduction referencing a relevant published topic or site theme]</p>
+              <p>[Specific opportunity description / value proposition]</p>
+              <p>[Call to action & clear, frictionless next step]</p>
+              <p>Best regards,<br /><span style="color: var(--text-dim);">[Outreach Representative]</span></p>
+            </div>
+          </div>
+
+          <div class="style-tags">
+            <span class="style-tag">Forward &amp; Upbeat</span>
+            <span class="style-tag">Serious &amp; Corporate</span>
+            <span class="style-tag">Casual &amp; Concise</span>
+          </div>
+
+          <div class="sample-disclaimer">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Original client/company email copy is not reproduced publicly.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LINK BUILDING PROCESS SECTION
+       ========================================================================== -->
+  <section class="section-spacing" id="process">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">04 — MY LINK-BUILDING PROCESS</span>
+        <h2 class="section-title">A simple six-step workflow.</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card reveal">
+          <span class="process-number">01</span>
+          <h3 class="process-step-title">Research</h3>
+          <p class="process-step-desc">Find relevant websites and opportunities.</p>
+        </div>
+
+        <div class="process-card reveal">
+          <span class="process-number">02</span>
+          <h3 class="process-step-title">Analyze</h3>
+          <p class="process-step-desc">Review relevance and available SEO signals.</p>
+        </div>
+
+        <div class="process-card reveal">
+          <span class="process-number">03</span>
+          <h3 class="process-step-title">Prepare</h3>
+          <p class="process-step-desc">Organize data and prepare outreach.</p>
+        </div>
+
+        <div class="process-card reveal">
+          <span class="process-number">04</span>
+          <h3 class="process-step-title">Outreach</h3>
+          <p class="process-step-desc">Send clear, personalized messages.</p>
+        </div>
+
+        <div class="process-card reveal">
+          <span class="process-number">05</span>
+          <h3 class="process-step-title">Follow Up</h3>
+          <p class="process-step-desc">Track responses and follow up consistently.</p>
+        </div>
+
+        <div class="process-card reveal">
+          <span class="process-number">06</span>
+          <h3 class="process-step-title">Report</h3>
+          <p class="process-step-desc">Update status and record results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHY ME SECTION
+       ========================================================================== -->
+  <section class="section-spacing" id="why-me">
+    <div class="container">
+      <div class="whyme-card reveal">
+        <div>
+          <span class="section-label">05 — WHY WORK WITH ME?</span>
+          <h2 class="section-title">Detail-oriented, dependable, and ready to learn.</h2>
+          <p class="section-description">
+            I'm still developing my professional SEO experience, but I already have practical exposure to link-building research, campaign organization, Ahrefs research, and outreach.
+          </p>
+        </div>
+
+        <div class="whyme-checklist">
+          <div class="whyme-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Detail-oriented and organized</span>
+          </div>
+          <div class="whyme-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Quick to learn and adapt</span>
+          </div>
+          <div class="whyme-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Reliable and deadline-focused</span>
+          </div>
+          <div class="whyme-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Clear communication</span>
+          </div>
+          <div class="whyme-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Genuinely interested in SEO and digital growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section class="section-spacing" id="contact">
+    <div class="container">
+      <div class="contact-wrapper reveal">
+        <div class="contact-content">
+          <span class="section-label">06 — LET'S WORK TOGETHER</span>
+          <h2 class="section-title">Open to freelance &amp; part-time SEO opportunities.</h2>
+          <p class="section-description" style="margin: 0 auto;">
+            I'd be happy to discuss my experience, answer questions, or provide additional work samples.
+          </p>
+
+          <div class="contact-actions">
+            <a href="https://www.linkedin.com/in/john-phoenix-baclayon/" target="_blank" rel="noopener noreferrer" class="btn btn-gradient">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              Connect with me on LinkedIn ↗
+            </a>
+
+            <a href="mailto:john.phoenixb@gmail.com" class="email-direct">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              john.phoenixb@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>© 2026 John Phoenix Baclayon</p>
+      <p>SEO Link Building Specialist</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       LIGHTWEIGHT VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle
+      const mobileToggle = document.getElementById('mobileToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('is-open');
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('is-open');
+          });
+        });
+      }
+
+      // Intersection Observer for Smooth Reveal Animations
+      const revealElements = document.querySelectorAll('.reveal');
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    });
+  </script>
+</body>
+</html>
